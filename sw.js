@@ -1,5 +1,10 @@
-const CACHE = 'cinema-roulette-v1';
-const ASSETS = ['/', '/index.html', '/manifest.json', '/icon.svg'];
+const CACHE = 'cinema-roulette-v2';
+const ASSETS = [
+  '/cinema-roulette/',
+  '/cinema-roulette/index.html',
+  '/cinema-roulette/manifest.json',
+  '/cinema-roulette/icon.svg'
+];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
